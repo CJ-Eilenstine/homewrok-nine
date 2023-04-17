@@ -1,0 +1,55 @@
+.blog-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 98px);
+    width: 100%;
+
+    .blog-left {
+        width: 50%;
+        min-height: 100%;
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px 60px;
+
+        .blog-i {
+            width: 86.5%;
+            height: 250px;
+            border: solid 2px #471F00;
+            background-image: url(../images/pexels-max-vakhtbovych-6301168.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .blog-ii {
+            width: 86.5%;
+            height: 250px;
+            border: solid 2px #471F00;
+            background-image: url(../images/steven-ungermann-Aac7IlKnYX8-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }  
+    
+    .blog-right {
+        width: 50%;
+        padding: 7% 3%;
+        height: calc(100vh - 98px);
+
+        h1 {
+            font-size: 130%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: 90%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    }
+}

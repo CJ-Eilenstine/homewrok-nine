@@ -1,0 +1,54 @@
+.index-body {
+    width: 100%;
+    height: calc(100vh - 98px);
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(../images/sidekix-media-WgkA3CSFrjc-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 150px;
+    padding-left: 135px;
+
+    .decorating-ideas {
+        max-width: 690px;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            color: white;
+            font-size: 76px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            color: white;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .index-box {
+            align-self: center;
+            border: solid #fff 2px;
+            color: #fff;
+            min-width: 274px;
+            height: 51px;
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 7px;
+        }
+    }
+
+    .copyright {
+        align-self: center;
+
+        p {
+            color: #fff;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
