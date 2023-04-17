@@ -84,19 +84,30 @@ var contactBody = `    <div class="contact-body">
 </div>
 </div>
 `
-function initListeners(){
 
-    $("nav a").on("click", function(e){
-        let btnID = e.currentTarget.id;
-        var pageContentID = btnID + "Body";
-        console.log(eval(pageContentID));
-        changePageContent(pageContentID)
-    })
+function changeRoute() {
+let hashTag = window.location.hash;
+ let pageID = hashTag.replace('#', '');
+// console.log(hashTag + ' ' + pageID);
+
+if (pageID != '') {
+$.get(`pages/pageID/pageID.html`, function (data) {
+ console.log('data ' + data);
+ $('#app').html(data);
+});
+} else {
+$.get(`pages/home/home.html`, function (data) {
+console.log('data ' + data);
+ $('#app').html(data);
+});
 }
-$(document).ready(function (){
-    changePageContent("indexBody");
-    initListeners();
-})
-function changePageContent(pageContentID){
-  $("#app").html(eval(pageContentID));
 }
+
+function initURLListener() {
+$(window).on('hashchange', changeRoute);
+changeRoute();
+}
+
+$(document).ready(function () {
+initURLListener();
+});
